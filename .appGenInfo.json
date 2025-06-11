@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Jun 11 2025 02:56:55 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://2ed4189atrial-dev-mycapm-srv.cfapps.us10-001.hana.ondemand.com/odata/v2/catalog",
+    "appName": "ui5_everything",
+    "appTitle": "UI5 controls",
+    "appDescription": "ui5 controls",
+    "appNamespace": "cpapp",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.1",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.0",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "In order to launch the generated app, simply run the following from the generated app root folder:\n\n```\n    npm start\n```"
+  }
+}
