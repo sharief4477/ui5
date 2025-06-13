@@ -9,20 +9,7 @@ sap.ui.define([
 
     return Controller.extend("cpapp.ui5everything.controller.Home", {
         onInit() {
-         //#region i18n Resource model
-        //  const oData = {
-        //     recipient : {
-        //        name : "World"
-        //     }
-        //  };
-        //  const oModel = new JSONModel(oData);
-        //  this.getView().setModel(oModel);
-        //  const i18nModel = new ResourceModel({
-        //     bundleName: "cpapp.ui5everything.i18n.i18n"
-        //  });
-        //  this.getView().setModel(i18nModel, "i18n");
-         //#endregion
-
+     
             //#region Placing button in whole page
             // new Button({
             //     text: "Ready...",
@@ -37,7 +24,21 @@ sap.ui.define([
          const sRecipient = this.getView().getModel().getProperty("/recipient/name");
          const sMsg = oBundle.getText("helloMsg", [sRecipient]);
          MessageToast.show(sMsg);
-         }
+         },
+
+         //#region Fragment
+         async onOpenDialog() {
+            // create dialog lazily
+            this.oDialog ??= await this.loadFragment({
+                name: "cpapp.ui5everything.view.HelloDialog"
+            });
+        
+            this.oDialog.open();
+        },
+        onCloseDialog() {
+			this.byId("helloDialog").close();
+		}
+         //#endregion
 
         //#region Mis
        
