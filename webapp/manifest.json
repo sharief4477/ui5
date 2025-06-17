@@ -107,17 +107,26 @@
       },
       "routes": [
         {
-          "name": "RouteHome",
-          "pattern": ":?query:",
-          "target": [
+          "name": "TargetHome",
+          "pattern": "",
+          "target": 
             "TargetHome"
-          ]
+          
+        },
+        {
+          "pattern": "detail/{invoicePath}",
+          "name": "detail",
+          "target": "detail"
         }
       ],
       "targets": {
         "TargetHome": {
           "id": "Home",
           "name": "Home"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail"
         }
       }
     },

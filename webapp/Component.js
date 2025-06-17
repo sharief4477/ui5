@@ -2,8 +2,9 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "cpapp/ui5everything/model/models",
      "sap/ui/model/json/JSONModel",
-   "sap/ui/model/resource/ResourceModel"
-], (UIComponent, models,JSONModel,ResourceModel) => {
+   "sap/ui/model/resource/ResourceModel",
+   "sap/ui/Device"
+], (UIComponent, models,JSONModel,ResourceModel,Device) => {
     "use strict";
 
     return UIComponent.extend("cpapp.ui5everything.Component", {
@@ -43,6 +44,10 @@ sap.ui.define([
 
             // enable routing
             this.getRouter().initialize();
-        }
+        },
+
+		getContentDensityClass() {
+			return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
+		}
     });
 });
