@@ -4,7 +4,8 @@ sap.ui.define([
   "use strict";
 
   return BaseController.extend("cpapp.ui5everything.controller.App", {
-      onInit() {
+      onInit() {//content density
+        this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
       }
   });
 });
