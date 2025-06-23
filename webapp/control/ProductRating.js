@@ -97,5 +97,13 @@ sap.ui.define([
 			oRm.renderControl(oControl.getAggregation("_button"));
 			oRm.close("div");
 		}
+		/*to add custom onAfterRendering for
+oControl.addEventDelegate({// 
+    onAfterRendering:function() {
+        // var $label = oControl.$().find(".sapMLabel");
+		//$label.text("Better");
+    }
+});
+		*/
 	});
 });
