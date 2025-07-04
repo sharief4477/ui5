@@ -105,14 +105,16 @@
         "viewType": "XML",
         "path": "cpapp.ui5everything.view",
         "async": true,
-        "viewPath": "cpapp.ui5everything.view"
+        "viewPath": "cpapp.ui5everything.view",
+        "bypassed": {
+          "target": "notFound"
+       }
       },
       "routes": [
         {
           "name": "TargetHome",
           "pattern": "",
-          "target": 
-            "TargetHome"
+          "target": "TargetHome"
           
         },
         {
@@ -124,12 +126,20 @@
       "targets": {
         "TargetHome": {
           "id": "Home",
-          "name": "Home"
+          "name": "Home",
+          "level": 1
         },
         "detail": {
           "id": "detail",
-          "name": "Detail"
-        }
+          "name": "Detail",
+          "transition":"flip"
+        },
+        "notFound": {
+          "id": "notFound",
+          "name": "NotFound",
+          "transition": "show",
+          "level": 2
+       }
       }
     },
     "rootView": {
